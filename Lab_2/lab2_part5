@@ -1,0 +1,57 @@
+#Hofbauer Lab1 part5
+
+.data
+A:	.word	0
+B:	.word	0
+C:	.word	0
+
+.text
+main:
+addi	t0,zero,5		#int i = 5
+addi	t1,zero,10		#int j = 10
+
+addi	sp,sp,-8		#offsets stack pointer to fit two 4 byte integers
+sw	t0,0(sp)		#saves i and j onto the stack
+sw	t1,4(sp)
+
+add	a0,zero,t0		# n = i into a0 for function input
+jal	AddItUp
+sw	t1,A,s0			#save x into a for the return value
+
+lw	t1,4(sp)		#loads j=10 from the stack
+add	a0,zero,t1		# n = j into a0 for function input
+jal	AddItUp
+sw	t1,B,s0
+
+lw	t2,A
+lw	t3,B
+add	t2,t2,t3		#a+b=c
+sw	t2,C,t4
+
+li  a7,10       #system call for an exit
+ecall
+
+
+
+
+
+
+
+
+
+AddItUp:
+add	t0,zero,zero		#int i and x = 0
+add	t1,zero,zero
+
+#for loop
+startloop:
+blt	t0,a0,loop		# if (i<n) go toloop
+j endloop
+
+loop:
+addi	t0,t0,1			#i++
+add	t1,t0,t1		#x=x+i+1
+j startloop			#restarts loop
+
+endloop:
+ret

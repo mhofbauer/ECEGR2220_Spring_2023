@@ -1,0 +1,81 @@
+#Hofbauer Lab1 part2
+.data
+A:	.word  15
+B:	.word  15
+C:	.word  10
+Z:	.word  0
+
+.text
+main:
+
+#Loading the variables into registers
+lw t0, A #int A
+lw t1, B #int B
+lw t2, C #int C
+lw t3, Z #int Z
+
+if_begin:
+slt	a0,t0,t1	#sets a0 for (A < B)
+addi	t4,zero,5	#sets t4 to 5 for slt
+
+slt	a1,t4,t2	#sets a1 for (5 < C)
+and	a2,a0,a1	#sets a2 for (a<B)and(5<C)
+ 
+beq	a2,zero,elseif	#if the result of and is not true jumps to elseif
+
+addi 	a6,zero,1	#sets Z = 1
+j endif #jumps to endif
+
+elseif:
+slt	a0,t1,t0	#sets a0 for (B<A)
+
+addi	t4,t2,1 	#puts C+1 into t4 
+andi	a1,t4,7		#sets a1 for (c+1)==7
+
+and	a2,a0,a1	#sets a2 for (B<A)||(C+1)==7
+
+beq	a2,zero,else	#if the results of and is not true jump to else
+
+addi	a6,zero,2	#sets Z=2
+j endif #jumps to endif
+
+else:
+addi	a6,zero,3	#sets Z=2
+j endif #jumps to endif
+
+endif:
+
+switch:
+addi	t4,zero,1
+addi	t5,zero,2
+addi	t6,zero,3
+
+beq	a6,t4,case1	#if a0 equals 1) jumps to case1
+
+beq	a6,t5,case2
+
+beq	a6,t6,case3
+
+j default		#if no cases are true jumps to default
+
+case1:
+addi	a7,zero,-1	#sets a7 to case output
+j endswitch		#jumps out of funct
+
+case2:
+addi	a7,zero,-2
+j endswitch
+
+case3:
+addi	a7,zero,-3
+j endswitch
+
+default:
+add	a7,zero,zero
+j endswitch
+
+endswitch:
+
+sw	a7,Z,t6		#stores a7 into Z's location in memory
+
+#end 

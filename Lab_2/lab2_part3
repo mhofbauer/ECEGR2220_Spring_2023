@@ -1,0 +1,46 @@
+#Hofbauer Lab1 part3
+.data
+Z:	.word  2
+i:	.word  0
+
+.text
+main:
+lw 	a6, i 			#int i
+lw 	a7, Z 			#int Z
+
+#for loop
+addi	a0,zero,20 		#a0 holds the paramenter for i in loop
+startloop:
+bge	a0,a6,loop		# if (20>=i) go toloop
+j endloop
+
+loop:
+addi	a6,a6,2			#i=i+2
+addi	a7,a7,1			#Z++
+j startloop			#restarts loop
+
+endloop:
+
+#do while loop
+addi	a0,zero,100 		#a0 holds the paramenter for do whileloop
+do:
+addi	a7,a7,1			#Z++:
+blt	a7,a0,do
+end_do_while:
+
+#while loop
+condition:
+blt 	zero,a6,while 		#if condition is true go to while loop
+j end_while			#otherwise leave loop	  
+
+while:
+addi	a6,a6,-1		#i--
+addi	a7,a7,-1		#Z--
+j condition			#check condition again
+
+end_while:
+
+sw	a6,i,t5			#stores a6 into i's location in memory
+sw	a7,Z,t6			#stores a7 into Z's location in memory
+
+#end program
