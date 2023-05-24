@@ -74,15 +74,6 @@ architecture memmy of register8 is
 	end component;
 begin
 	-- insert your code here.
-	bit1: bitstorage PORT MAP (datain(0), enout, writein, dataout(0));
-	bit2: bitstorage PORT MAP (datain(1), enout, writein, dataout(1));
-	bit3: bitstorage PORT MAP (datain(2), enout, writein, dataout(2));
-	bit4: bitstorage PORT MAP (datain(3), enout, writein, dataout(3));
-	bit5: bitstorage PORT MAP (datain(4), enout, writein, dataout(4));
-	bit6: bitstorage PORT MAP (datain(5), enout, writein, dataout(5));
-	bit7: bitstorage PORT MAP (datain(6), enout, writein, dataout(6));
-	bit8: bitstorage PORT MAP (datain(7), enout, writein, dataout(7));
-	
 end architecture memmy;
 
 --------------------------------------------------------------------------------
@@ -101,23 +92,8 @@ end entity register32;
 architecture biggermem of register32 is
 	-- hint: you'll want to put register8 as a component here 
 	-- so you can use it below
-	-- insert code here.
-	component register8
-		port(	datain: in STD_LOGIC_VECTOR(7 downto 0);
-			enout: in STD_LOGIC;
-			writein: in STD_LOGIC;
-			dataout: out STD_LOGIC_VECTOR(7 downto 0));
-	end component;
-
-	signal enableout: STD_LOGIC_VECTOR(2 downto 0);
-	signal writein: STD_LOGIC_VECTOR(2 downto 0);
-	signal enablingout: STD_LOGIC_VECTOR(3 downto 0);
-	signal writingin: STD_LOGIC_VECTOR(3 downto 0);
 begin
-	enableout <= enout32 & enout16 & enout8;
-	writein <= writein32 & writein16 & writein8;
-
-
+	-- insert code here.
 end architecture biggermem;
 
 --------------------------------------------------------------------------------
