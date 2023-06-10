@@ -244,22 +244,34 @@ architecture ALU_Arch of ALU is
 	signal andOutput: std_logic_vector(31 downto 0);
 	signal orOutput: std_logic_vector(31 downto 0);
 	signal shifterOutput: std_logic_vector(31 downto 0);
+	signal signAddSub: std_logic;
+	signal rightOrLeft: std_logic;
 
 	signal aluOutput: std_logic_vector(31 downto 0);
 
 begin
 	-- Add ALU VHDL implementation here
-	adderOperation: adder_subtracter port map (DataIn1, DataIn2, ALUCtrl(2),adderOutput,carryOut);
+	adderOperation: adder_subtracter port map (DataIn1, DataIn2, signAddSub,adderOutput,carryOut);
 	andOutput <= DataIn1(31 downto 0) and DataIn2(31 downto 0);
-	orOutput <= DataIn1(31 downto 0) or DataIn2(31 downto 0);
-	shifterOperation: shift_register port map (DataIn1, ALUCtrl(3),DataIn2(4 downto 0), shifterOutput);
+	orOutput <= DataIn1(31 downto 0) or DataIn2(31 downto 0); --check 
+	shifterOperation: shift_register port map (DataIn1, rightOrLeft,DataIn2(4 downto 0), shifterOutput);
+
+	with ALUCtrl select
+		signAddSub <= '0' when "00000", 	-- add op
+			      '1' when others; 		--sub op
+	with ALUCtrl select
+		rightOrLeft <= '0' when "00100", 	-- left
+			       '1' when others; 	-- right
 	
-	aluOutput <=  	adderOutput when ALUCtrl(3 downto 0) = "0010" or ALUCtrl(3 downto 0) = "0100" else
-			andOutput when ALUCtrl(3 downto 0) = "0000" else
-			orOutput when ALUCtrl(3 downto 0) = "0001" else
-			shifterOutput when ALUCtrl(3 downto 0) = "0100" or ALUCtrl(3 downto 0) = "0110" else
+	
+	aluOutput <=  	adderOutput when ALUCtrl(3 downto 0) = "00000" or adderOutput when ALUCtrl(3 downto 0) = "00001" else
+			andOutput when ALUCtrl(3 downto 0) = "00010" else
+			orOutput when ALUCtrl(3 downto 0) = "00011" else
+			shifterOutput when ALUCtrl(3 downto 0) = "00100" or ALUCtrl(3 downto 0) = "00101" else
 			DataIn2 when ALUCtrl = "1111";
 
+
+	
 	ALUResult <= aluOutput;
 		with aluOutput select
 			Zero <= '1' when x"00000000",

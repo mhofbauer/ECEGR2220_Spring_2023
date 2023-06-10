@@ -226,3 +226,7 @@ add wave -position insertpoint sim:/testreg_vhd/*
 restart
 # ** Note: (vsim-8009) Loading existing optimized design _opt1
 run
+quit -sim
+# End time: 18:10:27 on Jun 09,2023, Elapsed time: 1:27:17
+# Errors: 0, Warnings: 1
+project open C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_4/lab4

@@ -50,59 +50,59 @@ BEGIN
 		wait for 100 ns;
 
 		-- Start testing the ALU
-		datain_a <= X"FFFF0000";	-- DataIn in hex
-		datain_b <= X"0000FFFF";
+		datain_a <= X"FFF0000";	-- DataIn in hex
+		datain_b <= X"000FFFF";
 		control  <= "00000";		-- Control in binary (ADD and ADDI test)
 		wait for 50 ns; 			-- result = 0x124578AB  and zeroOut = 0
 
 		-- Add test cases here to drive the ALU implementation
-		datain_a <= X"FFFF0000";	-- DataIn in hex
-		datain_b <= X"0000FFFF";
+		datain_a <= X"FFF0000";	-- DataIn in hex
+		datain_b <= X"000FFFF";
 		control  <= "00001";		-- Control in binary --sub
 		wait for 50 ns;
 
-		datain_a <= X"FFFF0000";	-- DataIn in hex
-		datain_b <= X"00000037";
+		datain_a <= X"FFF0000";	-- DataIn in hex
+		datain_b <= X"0000037";
 		control  <= "00000";		-- Control in binary --addi
 		wait for 50 ns;
 
-		datain_a <= X"FFFF0000";	-- DataIn in hex
-		datain_b <= X"FFFF0000";
+		datain_a <= X"FFF0000";	-- DataIn in hex
+		datain_b <= X"FFF0000";
 		control  <= "00010";		-- Control in binary and
 		wait for 50 ns;
 
-		datain_a <= X"FFFF0000";	-- DataIn in hex
-		datain_b <= X"000000FF";
+		datain_a <= X"FFF0000";	-- DataIn in hex
+		datain_b <= X"00000FF";
 		control  <= "00010";		-- Control in binary andi
 		wait for 50 ns;
 					
-		datain_a <= X"FFFF0000";	-- DataIn in hex
-		datain_b <= X"0000FFFF";
+		datain_a <= X"FFF0000";	-- DataIn in hex
+		datain_b <= X"000FFFF";
 		control  <= "00011";		-- Control in binary or
 		wait for 50 ns;
 					
-		datain_a <= X"FFFF0000";	-- DataIn in hex
-		datain_b <= X"000000FF";
+		datain_a <= X"FFF0000";	-- DataIn in hex
+		datain_b <= X"00000FF";
 		control  <= "00011";		-- Control in binary ori
 		wait for 50 ns;
 					
-		datain_a <= X"FFFF0000";	-- DataIn in hex
-		datain_b <= X"00000003";
+		datain_a <= X"FFF0000";	-- DataIn in hex
+		datain_b <= X"0000003";
 		control  <= "00100";		-- Control in binary sll
 		wait for 50 ns;
 					
-		datain_a <= X"FFFF0000";	-- DataIn in hex
-		datain_b <= X"00000001";
+		datain_a <= X"FFF0000";	-- DataIn in hex
+		datain_b <= X"0000001";
 		control  <= "00100";		-- Control in binary slli
 		wait for 50 ns;
 					
-		datain_a <= X"FFFF0000";	-- DataIn in hex
-		datain_b <= X"00000003";
+		datain_a <= X"FFF0000";	-- DataIn in hex
+		datain_b <= X"0000003";
 		control  <= "00101";		-- Control in binary srl
 		wait for 50 ns;
 					
-		datain_a <= X"FFFF0000";	-- DataIn in hex
-		datain_b <= X"00000002";
+		datain_a <= X"FFF0000";	-- DataIn in hex
+		datain_b <= X"0000002";
 		control  <= "00101";		-- Control in binary srli
 		wait for 50 ns;
 					

@@ -1,7 +1,7 @@
 .data
 A:	.word  3
 B:	.word  10
-C:	.word  20
+C:	.word  30
 newln:	.asciz	"\r\n"
 
 .text
@@ -35,7 +35,7 @@ jal 	ra, fibo
 
 li a7,1
 ecall				#prints result for convience
-mv	a4,a0			#moves reult into a2 as a0
+mv	a4,a0			#moves reult into a4 as a0
 
 li 	a7,10
 ecall				#exit call
