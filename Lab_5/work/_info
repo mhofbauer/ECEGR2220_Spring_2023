@@ -1,6 +1,9 @@
 m255
 K4
 z2
+Z0 !s99 nomlopt
+R0
+R0
 !s11e MIXED_VERSIONS
 13
 !s112 1.1
@@ -9,97 +12,154 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_4
+T_opt
+!s110 1686375288
+VmYegjTS:?Sh;MFa<I9B;?2
+04 11 8 work tmemory_vhd behavior 1
+=6-14f6d8679517-64840b78-167-2284
+!s124 OEM10U3 
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
 Eram
-Z0 w1686352368
-Z1 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z3 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 3
-Z6 dC:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_5
-Z7 8C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_5/Memory.vhd
-Z8 FC:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_5/Memory.vhd
+Z1 w1686374920
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 11
+Z7 dC:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_5
+Z8 8C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_5/Memory.vhd
+Z9 FC:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_5/Memory.vhd
 l0
-L11 1
+Z10 L11 1
 VNc@NT[?`T^`5=oR;nc;z_2
 !s100 :B:Ji:295CNahda9_8<OC1
-Z9 OL;C;2021.2;73
+Z11 OL;C;2021.2;73
 32
-Z10 !s110 1686352373
+Z12 !s110 1686375283
 !i10b 1
-Z11 !s108 1686352373.000000
-Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_5/Memory.vhd|
-Z13 !s107 C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_5/Memory.vhd|
+Z13 !s108 1686375283.000000
+Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_5/Memory.vhd|
+Z15 !s107 C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_5/Memory.vhd|
 !i113 0
-Z14 o-work work -2002 -explicit
-Z15 tExplicit 1 CvgOpt 0
+Z16 o-work work -2002 -explicit
+Z17 tExplicit 1 CvgOpt 0
 Astaticram
-R1
 R2
 R3
 R4
 R5
-Z16 DEx4 work 3 ram 0 22 Nc@NT[?`T^`5=oR;nc;z_2
-!i122 3
+R6
+DEx4 work 3 ram 0 22 Nc@NT[?`T^`5=oR;nc;z_2
+!i122 11
 l26
-Z17 L21 42
-Z18 VmnSTZZLDThL:O<TMC7iBc1
-Z19 !s100 HR?NCCj6f1OOMgU`IK7z@0
-R9
-32
-R10
-!i10b 1
+L21 42
+VmnSTZZLDThL:O<TMC7iBc1
+!s100 HR?NCCj6f1OOMgU`IK7z@0
 R11
+32
 R12
+!i10b 1
 R13
-!i113 0
 R14
 R15
+!i113 0
+R16
+R17
 Eregisters
-R0
 R1
 R2
 R3
 R4
 R5
-!i122 3
 R6
+!i122 11
 R7
 R8
+R9
 l0
 L71 1
 V@f>N5;na98oN81]Nzg4EU1
 !s100 dU0zGoVYAAeSZUY1BjSoO3
-R9
-32
-R10
-!i10b 1
 R11
+32
 R12
+!i10b 1
 R13
-!i113 0
 R14
 R15
+!i113 0
+R16
+R17
 Aremember
-R1
 R2
 R3
 R4
 R5
+R6
 DEx4 work 9 registers 0 22 @f>N5;na98oN81]Nzg4EU1
-!i122 3
+!i122 11
 l101
-L81 78
-VU5<la4M4YRTDSM24<n5U10
-!s100 bcP[ldZ^Sk9Tb6LeieA380
-R9
-32
-R10
-!i10b 1
+L81 80
+VNYFel`_R?1MN1;@;^<`PE1
+!s100 j2oKF599bYnz^j_95?of93
 R11
+32
 R12
+!i10b 1
 R13
-!i113 0
 R14
 R15
+!i113 0
+R16
+R17
+Etmemory_vhd
+Z18 w1686375274
+R2
+R3
+R4
+R5
+R6
+!i122 12
+R7
+Z19 8C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_5/tMemory.vhd
+Z20 FC:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_5/tMemory.vhd
+l0
+R10
+Vif5Y=^]Ec:KR3FkV4F[JZ3
+!s100 To_T8cL8kc>aMze>51Jo]3
+R11
+32
+R12
+!i10b 1
+R13
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_5/tMemory.vhd|
+Z22 !s107 C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_5/tMemory.vhd|
+!i113 0
+R16
+R17
+Abehavior
+R2
+R3
+R4
+R5
+R6
+DEx4 work 11 tmemory_vhd 0 22 if5Y=^]Ec:KR3FkV4F[JZ3
+!i122 12
+l55
+L14 269
+Vg8ddW8:DFWB<2makEGDoa2
+!s100 TV=KZW92AlU9B_T4@SO8<3
+R11
+32
+R12
+!i10b 1
+R13
+R21
+R22
+!i113 0
+R16
+R17

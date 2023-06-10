@@ -246,16 +246,6 @@ BEGIN
 		writeCmd <= '0';
 		wait for 5 ns;	
 
-		dataIn   <= X"88888888"; 
-		writeReg <= "00000"; 			--testing hardwired zero
-		writeCmd <= '1';
-		wait for 5 ns;	
-		writeCmd <= '0';
-		wait for 5 ns;	
-
-
-
-
 		readReg1 <= "00000";
 		readReg2 <= "01010";
 		wait for 10 ns;	

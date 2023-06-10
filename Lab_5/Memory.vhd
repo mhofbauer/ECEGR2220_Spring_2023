@@ -86,39 +86,40 @@ architecture remember of Registers is
 		 dataout: out std_logic_vector(31 downto 0));
 	end component;
 	
-	signal vector0:std_logic_vector(31 downto 0);
-	signal vector1:std_logic_vector(31 downto 0);
-	signal vector2:std_logic_vector(31 downto 0);
-	signal vector3:std_logic_vector(31 downto 0);
-	signal vector4:std_logic_vector(31 downto 0);
-	signal vector5:std_logic_vector(31 downto 0);
-	signal vector6:std_logic_vector(31 downto 0);
-	signal vector7:std_logic_vector(31 downto 0);
+	signal a0:std_logic_vector(31 downto 0);
+	signal a1:std_logic_vector(31 downto 0);
+	signal a2:std_logic_vector(31 downto 0);
+	signal a3:std_logic_vector(31 downto 0);
+	signal a4:std_logic_vector(31 downto 0);
+	signal a5:std_logic_vector(31 downto 0);
+	signal a6:std_logic_vector(31 downto 0);
+	signal a7:std_logic_vector(31 downto 0);
 	signal hardwiredZero:std_logic_vector(31 downto 0);
 	
 	signal writeIn: std_logic_vector(7 downto 0);
 	
 begin
     -- Add your code here for the Register Bank implementation
-	ReadData1 <=	vector0 when (ReadReg1="01010") else
-			vector1 when (ReadReg1="01011") else
-			vector2 when (ReadReg1="01100") else
-			vector3 when (ReadReg1="01101") else
-			vector4 when (ReadReg1="01110") else
-			vector5 when (ReadReg1="01111") else
-			vector6 when (ReadReg1="10000") else
-			vector7 when (ReadReg1="10001") else
+	ReadData1 <=	a0 when (ReadReg1="01010") else
+			a1 when (ReadReg1="01011") else
+			a2 when (ReadReg1="01100") else
+			a3 when (ReadReg1="01101") else
+			a4 when (ReadReg1="01110") else
+			a5 when (ReadReg1="01111") else
+			a6 when (ReadReg1="10000") else
+			a7 when (ReadReg1="10001") else
 			hardwiredZero when (ReadReg1="00000") else
 			(others => 'Z');
 
-	ReadData2 <=	vector0 when (ReadReg1="01010") else
-			vector1 when (ReadReg1="01011") else
-			vector2 when (ReadReg1="01100") else
-			vector3 when (ReadReg1="01101") else
-			vector4 when (ReadReg1="01110") else
-			vector5 when (ReadReg1="01111") else
-			vector6 when (ReadReg1="10000") else
-			vector7 when (ReadReg1="10001") else
+
+	ReadData2 <=	a0 when (ReadReg1="01010") else
+			a1 when (ReadReg1="01011") else
+			a2 when (ReadReg1="01100") else
+			a3 when (ReadReg1="01101") else
+			a4 when (ReadReg1="01110") else
+			a5 when (ReadReg1="01111") else
+			a6 when (ReadReg1="10000") else
+			a7 when (ReadReg1="10001") else
 			hardwiredZero when (ReadReg1="00000") else
 			(others => 'Z');
 	
@@ -127,14 +128,14 @@ begin
 	begin
 		if(WriteCmd = '1') then
 			case WriteReg is 
-				when "01010" => writeIn <= "00000001";
-				when "01011" => writeIn <= "00000010";
-				when "01100" => writeIn <= "00000100";
-				when "01101" => writeIn <= "00001000";
-				when "01110" => writeIn <= "00010000";
-				when "01111" => writeIn <= "00100000";
-				when "10000" => writeIn <= "01000000";
-				when "10001" => writeIn <= "10000000";
+				when "01010" => writeIn <= "10000000";
+				when "01011" => writeIn <= "01000000";
+				when "01100" => writeIn <= "00100000";
+				when "01101" => writeIn <= "00010000";
+				when "01110" => writeIn <= "00001000";
+				when "01111" => writeIn <= "00000100";
+				when "10000" => writeIn <= "00000010";
+				when "10001" => writeIn <= "00000001";
 
 				when others  => writeIn <= "00000000";
 			
@@ -143,17 +144,18 @@ begin
 			writeIn <= "00000000";
 		end if;
 	end process;
+
 	
 	
 	 x0:register32 PORT MAP (WriteData,'0','1','1','0','0','0', hardwiredZero);			--Zero
-	x10:register32 PORT MAP (WriteData,'0','1','1', writeIn(0),'0','0', vector0);	--A0
-	x11:register32 PORT MAP (WriteData,'0','1','1', writeIn(1),'0','0', vector1);	--A1
-	x12:register32 PORT MAP (WriteData,'0','1','1', writeIn(2),'0','0', vector2);	--A2
-	x13:register32 PORT MAP (WriteData,'0','1','1', writeIn(3),'0','0', vector3);	--A3
-	x14:register32 PORT MAP (WriteData,'0','1','1', writeIn(4),'0','0', vector4);	--A4
-	x15:register32 PORT MAP (WriteData,'0','1','1', writeIn(5),'0','0', vector5);	--A5
-	x16:register32 PORT MAP (WriteData,'0','1','1', writeIn(6),'0','0', vector6);	--A6
-	x17:register32 PORT MAP (WriteData,'0','1','1', writeIn(7),'0','0', vector7);	--A7
+	x10:register32 PORT MAP (WriteData,'0','1','1', writeIn(0),'0','0', a0);	--A0
+	x11:register32 PORT MAP (WriteData,'0','1','1', writeIn(1),'0','0', a1);	--A1
+	x12:register32 PORT MAP (WriteData,'0','1','1', writeIn(2),'0','0', a2);	--A2
+	x13:register32 PORT MAP (WriteData,'0','1','1', writeIn(3),'0','0', a3);	--A3
+	x14:register32 PORT MAP (WriteData,'0','1','1', writeIn(4),'0','0', a4);	--A4
+	x15:register32 PORT MAP (WriteData,'0','1','1', writeIn(5),'0','0', a5);	--A5
+	x16:register32 PORT MAP (WriteData,'0','1','1', writeIn(6),'0','0', a6);	--A6
+	x17:register32 PORT MAP (WriteData,'0','1','1', writeIn(7),'0','0', a7);	--A7
 
 end remember;
 

@@ -125,7 +125,7 @@ begin
 
 	process(WriteCmd, WriteReg)
 	begin
-		if(WriteCmd = '1' then
+		if(WriteCmd = '1') then
 			case WriteReg is 
 				when "01010" => writeIn <= "00000001";
 				when "01011" => writeIn <= "00000010";

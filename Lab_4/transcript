@@ -52,3 +52,7 @@ restart -f
 # Loading work.fulladder(addlike)#1
 # Loading work.shift_register(shifter)#1
 run
+quit -sim
+# End time: 21:34:44 on Jun 09,2023, Elapsed time: 0:51:56
+# Errors: 0, Warnings: 1
+project open C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_5/lab5
