@@ -116,7 +116,21 @@ architecture biggermem of register32 is
 begin
 	enableout <= enout32 & enout16 & enout8;
 	writein <= writein32 & writein16 & writein8;
-
+	
+	with enableout select
+		enablingout <=  "1110" when "110",
+				"1100" when "101",
+				"0000" when "011",
+				"1111" when others;
+	with writein select
+		writingin <=	"0001" when "001",
+				"0011" when "010",
+				"1111" when "100",
+				"0000" when others;
+	reg1: register8 port map (datain(31 downto 24), enablingout(3),writingin(3),dataout(31 downto 24));
+	reg2: register8 port map (datain(23 downto 16), enablingout(2),writingin(2),dataout(23 downto 16));
+	reg3: register8 port map (datain(15 downto  8), enablingout(1),writingin(1),dataout(15 downto  8));
+	reg4: register8 port map (datain(7  downto  0), enablingout(0),writingin(0),dataout( 7 downto  0));
 
 end architecture biggermem;
 
@@ -135,9 +149,30 @@ entity adder_subtracter is
 end entity adder_subtracter;
 
 architecture calc of adder_subtracter is
-
+	component fulladder is
+   	 port (	a : in std_logic;
+        	b : in std_logic;
+          	cin : in std_logic;
+          	sum : out std_logic;
+          	carry : out std_logic
+         	);
+	end component;
+	
+	signal c: std_logic_vector(32 downto 0);
+	signal btemp: std_logic_vector(31 downto 0);
 begin
 	-- insert code here.
+	c(0) <= add_sub;
+	co <= c(32);
+
+	with add_sub select
+		btemp <= datain_b when '0',
+		not datain_b when others;
+
+	adder0: fulladder port map (datain_a(0), btemp(0),c(0), dataout(0), c(1));
+	genAdders: for i in 31 downto 1 generate
+	adderi: fulladder port map (datain_a(i), btemp(i), c(i), dataout(i), c(i+1));
+	end generate;
 end architecture calc;
 
 --------------------------------------------------------------------------------
@@ -155,8 +190,18 @@ end entity shift_register;
 
 architecture shifter of shift_register is
 	
+	
 begin
 	-- insert code here.
+	with dir & shamt (1 downto 0) select
+		dataout <= 	datain(30 downto 0) & '0' when "001",
+				'0' & datain(31 downto 1) when "101",
+				datain(29 downto 0) & "00" when "010",
+				"00" & datain(31 downto 2) when "110",
+				datain(28 downto 0) & "000" when "011",
+				"000" & datain(31 downto 3) when "111",
+				datain when others;
+	
 end architecture shifter;
 
 

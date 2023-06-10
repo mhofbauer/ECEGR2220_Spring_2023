@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 --
--- LAB #3
+-- LAB #4
 --
 --------------------------------------------------------------------------------
 
@@ -8,6 +8,8 @@ Library ieee;
 Use ieee.std_logic_1164.all;
 Use ieee.numeric_std.all;
 Use ieee.std_logic_unsigned.all;
+
+--Components
 
 entity bitstorage is
 	port(bitin: in std_logic;
@@ -30,7 +32,6 @@ begin
 	bitout <= q when enout = '0' else 'Z';
 end architecture memlike;
 
---------------------------------------------------------------------------------
 Library ieee;
 Use ieee.std_logic_1164.all;
 Use ieee.numeric_std.all;
@@ -52,7 +53,6 @@ begin
 end architecture addlike;
 
 
---------------------------------------------------------------------------------
 Library ieee;
 Use ieee.std_logic_1164.all;
 Use ieee.numeric_std.all;
@@ -85,7 +85,7 @@ begin
 	
 end architecture memmy;
 
---------------------------------------------------------------------------------
+
 Library ieee;
 Use ieee.std_logic_1164.all;
 Use ieee.numeric_std.all;
@@ -134,7 +134,7 @@ begin
 
 end architecture biggermem;
 
---------------------------------------------------------------------------------
+
 Library ieee;
 Use ieee.std_logic_1164.all;
 Use ieee.numeric_std.all;
@@ -172,10 +172,11 @@ begin
 	adder0: fulladder port map (datain_a(0), btemp(0),c(0), dataout(0), c(1));
 	genAdders: for i in 31 downto 1 generate
 	adderi: fulladder port map (datain_a(i), btemp(i), c(i), dataout(i), c(i+1));
-	end generate
+	end generate;
 end architecture calc;
 
---------------------------------------------------------------------------------
+
+
 Library ieee;
 Use ieee.std_logic_1164.all;
 Use ieee.numeric_std.all;
@@ -204,5 +205,69 @@ begin
 	
 end architecture shifter;
 
+
+
+-- AlU 
+
+Library ieee;
+Use ieee.std_logic_1164.all;
+Use ieee.numeric_std.all;
+Use ieee.std_logic_unsigned.all;
+
+entity ALU is
+	Port(	DataIn1: in std_logic_vector(31 downto 0);
+		DataIn2: in std_logic_vector(31 downto 0);
+		ALUCtrl: in std_logic_vector(4 downto 0);
+		Zero: out std_logic;
+		ALUResult: out std_logic_vector(31 downto 0) );
+end entity ALU;
+
+architecture ALU_Arch of ALU is
+	-- ALU components	
+	component adder_subtracter
+		port(	datain_a: in std_logic_vector(31 downto 0);
+			datain_b: in std_logic_vector(31 downto 0);
+			add_sub: in std_logic;
+			dataout: out std_logic_vector(31 downto 0);
+			co: out std_logic);
+	end component adder_subtracter;
+
+	component shift_register
+		port(	datain: in std_logic_vector(31 downto 0);
+		   	dir: in std_logic;
+			shamt:	in std_logic_vector(4 downto 0);
+			dataout: out std_logic_vector(31 downto 0));
+	end component shift_register;
+
+	signal adderOutput: std_logic_vector(31 downto 0);
+	signal carryOut: std_logic;
+	signal andOutput: std_logic_vector(31 downto 0);
+	signal orOutput: std_logic_vector(31 downto 0);
+	signal shifterOutput: std_logic_vector(31 downto 0);
+
+	signal aluOutput: std_logic_vector(31 downto 0);
+
+begin
+	-- Add ALU VHDL implementation here
+	adderOperation: adder_subtracter port map (DataIn1, DataIn2, ALUCtrl(2),adderOutput,carryOut);
+	andOutput <= DataIn1(31 downto 0) and DataIn2(31 downto 0);
+	orOutput <= DataIn1(31 downto 0) or DataIn2(31 downto 0);
+	shifterOperation: shift_register port map (DataIn1, ALUCtrl(3),DataIn2(4 downto 0), shifterOutput);
+	
+	aluOutput <=  	adderOutput when ALUCtrl(3 downto 0) = "0010" or ALUCtrl(3 downto 0) = "0100" else
+			andOutput when ALUCtrl(3 downto 0) = "0000" else
+			orOutput when ALUCtrl(3 downto 0) = "0001" else
+			shifterOutput when ALUCtrl(3 downto 0) = "0100" or ALUCtrl(3 downto 0) = "0110" else
+			DataIn2 when ALUCtrl = "1111";
+
+	ALUResult <= aluOutput;
+		with aluOutput select
+			Zero <= '1' when x"00000000",
+			'0' when others;
+	
+
+	
+
+end architecture ALU_Arch;
 
 

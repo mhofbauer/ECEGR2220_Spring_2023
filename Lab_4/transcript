@@ -1,0 +1,39 @@
+# Compile of Memory.vhd failed with 1 errors.
+# Compile of Memory.vhd failed with 1 errors.
+# Compile of Memory.vhd failed with 1 errors.
+# Compile of Memory.vhd was successful.
+project open C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_3/lab3
+# reading C:/intelFPGA/21.1/questa_fse/win64/../modelsim.ini
+# Loading project lab3
+# Compile of registers.vhd was successful with warnings.
+# Compile of tregisterswclues.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+# Load canceled
+vsim work.register32
+# vsim work.register32 
+# Start time: 16:18:00 on Jun 09,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.register32(biggermem)#1
+quit -sim
+# End time: 16:18:31 on Jun 09,2023, Elapsed time: 0:00:31
+# Errors: 0, Warnings: 17
+vsim work.adder_subtracter
+# vsim work.adder_subtracter 
+# Start time: 16:19:01 on Jun 09,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.adder_subtracter(calc)#1
+quit -sim
+# End time: 16:19:10 on Jun 09,2023, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 1

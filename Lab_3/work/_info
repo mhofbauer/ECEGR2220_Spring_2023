@@ -1,10 +1,391 @@
 m255
 K4
 z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11e MIXED_VERSIONS
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_1
+Z1 dC:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_1
+T_opt
+!s110 1686354082
+VIP9bM<;4WbVI=hS;mDdGN3
+Z2 04 11 8 work testreg_vhd behavior 1
+=1-14f6d8679517-6483b8a2-285-2630
+!s124 OEM10U72 
+o-quiet -auto_acc_if_foreign -work work
+Z3 tCvgOpt 0
+n@_opt
+Z4 OL;O;2021.2;73
+R1
+T_opt1
+!s110 1686354190
+VTJ_n@fCBTNeR6TKd]zBzZ1
+Z5 04 16 4 work adder_subtracter calc 1
+Z6 04 10 7 work bitstorage memlike 1
+Z7 04 9 7 work fulladder addlike 1
+Z8 04 10 9 work register32 biggermem 1
+Z9 04 9 5 work register8 memmy 1
+Z10 04 14 7 work shift_register shifter 1
+R2
+=1-14f6d8679517-6483b90e-136-1e7c
+!s124 OEM10U154 
+Z11 o-quiet -auto_acc_if_foreign -work work +acc
+R3
+n@_opt1
+R4
+T_opt2
+!s110 1686354006
+V6KO0=3>9^e3mJN5=f;32g2
+R5
+R6
+R7
+R8
+R9
+R10
+=1-14f6d8679517-6483b855-31e-2208
+!s124 OEM10U82 
+R11
+R3
+n@_opt2
+R4
+R1
+Eadder_subtracter
+Z12 w1685579880
+Z13 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z14 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z15 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z16 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z17 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 5
+Z18 dC:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_3
+Z19 8C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_3/registers.vhd
+Z20 FC:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_3/registers.vhd
+l0
+L143 1
+V7j_ULPh0CgWjH2`dh6LzI3
+!s100 4]zd4oI_kgDNne>W;]^^o3
+Z21 OL;C;2021.2;73
+32
+Z22 !s110 1686352456
+!i10b 1
+Z23 !s108 1686352456.000000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_3/registers.vhd|
+Z25 !s107 C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_3/registers.vhd|
+!i113 0
+Z26 o-work work -2002 -explicit
+Z27 tExplicit 1 CvgOpt 0
+Acalc
+R13
+R14
+R15
+R16
+R17
+DEx4 work 16 adder_subtracter 0 22 7j_ULPh0CgWjH2`dh6LzI3
+!i122 5
+l163
+L151 26
+VEg?hf2efGjC;ddNJNLc:c0
+!s100 AHF4Qaczf<l:T51<YSALZ1
+R21
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R26
+R27
+Ebitstorage
+R12
+R13
+R14
+R15
+R16
+R17
+!i122 5
+R18
+R19
+R20
+l0
+Z28 L12 1
+VdCGWj`@VbHgV172Jg^EQX1
+!s100 WJnIlGlmDL72kEaZWY7LI2
+R21
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R26
+R27
+Amemlike
+R13
+R14
+R15
+R16
+R17
+DEx4 work 10 bitstorage 0 22 dCGWj`@VbHgV172Jg^EQX1
+!i122 5
+l21
+L19 13
+V<KY=mN>W^6@>cW`V]6Y^Y2
+!s100 >C<lEnBjkno6BlaBg7zNz3
+R21
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R26
+R27
+Efulladder
+R12
+R13
+R14
+R15
+R16
+R17
+!i122 5
+R18
+R19
+R20
+l0
+L39 1
+V=FPW_d1N0HAmBXP_4FHUj0
+!s100 MPWGQOD3M^:9b24Oc4LP:1
+R21
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R26
+R27
+Aaddlike
+R13
+R14
+R15
+R16
+R17
+DEx4 work 9 fulladder 0 22 =FPW_d1N0HAmBXP_4FHUj0
+!i122 5
+l49
+L48 5
+VYAZhA1hLlNW^KgldE^3f01
+!s100 <Eni[?PWcgZ?5R]=[zAgg3
+R21
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R26
+R27
+Eregister32
+R12
+R13
+R14
+R15
+R16
+R17
+!i122 5
+R18
+R19
+R20
+l0
+L94 1
+V7`L[O<^LEEjX9T1J43KYP0
+!s100 9:KQ84d6;ck<`zJS=0n;C1
+R21
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R26
+R27
+Abiggermem
+R13
+R14
+R15
+R16
+R17
+DEx4 work 10 register32 0 22 7`L[O<^LEEjX9T1J43KYP0
+!i122 5
+l116
+L101 35
+VjIP:OXb`C6aMcg@D`P=703
+!s100 0SYiGaCQnAo8nnUn?Rf8A3
+R21
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R26
+R27
+Eregister8
+R12
+R13
+R14
+R15
+R16
+R17
+!i122 5
+R18
+R19
+R20
+l0
+L61 1
+VCmLjgjT4F;9OEK[DbRco72
+!s100 DGz4Yz>el_lHHIC:Ik3m10
+R21
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R26
+R27
+Amemmy
+R13
+R14
+R15
+R16
+R17
+DEx4 work 9 register8 0 22 CmLjgjT4F;9OEK[DbRco72
+!i122 5
+l75
+L68 19
+V>CN49f:MlEGK87[5UAQXn2
+!s100 Pe0Xg27RhUCIKNCU:g8E:1
+R21
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R26
+R27
+Eshift_register
+R12
+R13
+R14
+R15
+R16
+R17
+!i122 5
+R18
+R19
+R20
+l0
+L184 1
+VM4T5PN1GSDSkbZVMS6BjD3
+!s100 3cIz9o65aXb2M3lCdcUKV1
+R21
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R26
+R27
+Ashifter
+R13
+R14
+R15
+R16
+R17
+DEx4 work 14 shift_register 0 22 M4T5PN1GSDSkbZVMS6BjD3
+!i122 5
+l194
+L191 15
+VRYF?FeOVLk@_5VR9_VXZK3
+!s100 OXLk9zQSFzC0SbAalehMQ3
+R21
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R26
+R27
+Etestreg_vhd
+Z29 w1681787775
+R15
+R13
+R14
+R16
+R17
+!i122 6
+R18
+Z30 8C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_3/tregisterswclues.vhd
+Z31 FC:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_3/tregisterswclues.vhd
+l0
+R28
+ViXoQXl2a;kM[chQ:j@fB?1
+!s100 [FQ?dzLOmOKmXoOC5VXHN0
+R21
+32
+R22
+!i10b 1
+R23
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_3/tregisterswclues.vhd|
+Z33 !s107 C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_3/tregisterswclues.vhd|
+!i113 0
+R26
+R27
+Abehavior
+R15
+R13
+R14
+R16
+R17
+DEx4 work 11 testreg_vhd 0 22 iXoQXl2a;kM[chQ:j@fB?1
+!i122 6
+l59
+L15 151
+VkbOe39?Vb]5;FNY]5>AO41
+!s100 zdoKYizBG:HDl<[>DIJn_0
+R21
+32
+R22
+!i10b 1
+R23
+R32
+R33
+!i113 0
+R26
+R27

@@ -1,0 +1,228 @@
+vsim work.testreg_vhd
+# vsim work.testreg_vhd 
+# Start time: 16:31:34 on Jun 09,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testreg_vhd(behavior)#1
+quit -sim
+# End time: 16:31:48 on Jun 09,2023, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 1
+vsim work._opt
+# vsim work._opt 
+# Start time: 16:31:51 on Jun 09,2023
+# ** Warning: (vsim-1963) Explicit invocation on automatically named optimized design "_opt" will not cause it to be locked.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.register32(biggermem)#1
+run
+run -continue
+# Break key hit
+quit -sim
+# End time: 16:32:51 on Jun 09,2023, Elapsed time: 0:01:00
+# Errors: 0, Warnings: 2
+vsim work.shift_register
+# vsim work.shift_register 
+# Start time: 16:38:07 on Jun 09,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.shift_register(shifter)#1
+quit -sim
+# End time: 16:38:20 on Jun 09,2023, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 1
+vsim -voptargs=+acc work.adder_subtracter
+# vsim -voptargs="+acc" work.adder_subtracter 
+# Start time: 16:38:24 on Jun 09,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.adder_subtracter(calc)#1
+# Loading work.fulladder(addlike)#1
+add wave -position insertpoint  \
+sim:/adder_subtracter/datain_a \
+sim:/adder_subtracter/datain_b \
+sim:/adder_subtracter/add_sub \
+sim:/adder_subtracter/dataout \
+sim:/adder_subtracter/co \
+sim:/adder_subtracter/c \
+sim:/adder_subtracter/btemp
+quit -sim
+# End time: 16:39:26 on Jun 09,2023, Elapsed time: 0:01:02
+# Errors: 0, Warnings: 1
+vsim -voptargs=+acc work.adder_subtracter work.bitstorage work.fulladder work.register32 work.register8 work.shift_register
+# vsim -voptargs="+acc" work.adder_subtracter work.bitstorage work.fulladder work.register32 work.register8 work.shift_register 
+# Start time: 16:40:05 on Jun 09,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.adder_subtracter(calc)#1
+# Loading work.bitstorage(memlike)#1
+# Loading work.fulladder(addlike)#1
+# Loading work.register32(biggermem)#1
+# Loading work.register8(memmy)#1
+# Loading work.shift_register(shifter)#1
+# Loading work.fulladder(addlike)#2
+# Loading work.register8(memmy)#2
+add wave -position insertpoint  \
+sim:/adder_subtracter/datain_a \
+sim:/adder_subtracter/datain_b \
+sim:/adder_subtracter/add_sub \
+sim:/adder_subtracter/dataout \
+sim:/adder_subtracter/co \
+sim:/adder_subtracter/c \
+sim:/adder_subtracter/btemp
+add wave -position insertpoint  \
+sim:/shift_register/datain \
+sim:/shift_register/dir \
+sim:/shift_register/shamt \
+sim:/shift_register/dataout
+add wave -position insertpoint  \
+sim:/register32/datain \
+sim:/register32/enout32 \
+sim:/register32/enout16 \
+sim:/register32/enout8 \
+sim:/register32/writein32 \
+sim:/register32/writein16 \
+sim:/register32/writein8 \
+sim:/register32/dataout \
+sim:/register32/enableout \
+sim:/register32/writein \
+sim:/register32/enablingout \
+sim:/register32/writingin
+quit -sim
+# End time: 16:41:21 on Jun 09,2023, Elapsed time: 0:01:16
+# Errors: 0, Warnings: 1
+vsim work.testreg_vhd
+# vsim work.testreg_vhd 
+# Start time: 16:41:22 on Jun 09,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testreg_vhd(behavior)#1
+vsim work.testreg_vhd
+# End time: 16:41:26 on Jun 09,2023, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 1
+# vsim work.testreg_vhd 
+# Start time: 16:41:26 on Jun 09,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testreg_vhd(behavior)#1
+quit -sim
+# End time: 16:42:13 on Jun 09,2023, Elapsed time: 0:00:47
+# Errors: 0, Warnings: 1
+vsim -voptargs=+acc work.adder_subtracter work.bitstorage work.fulladder work.register32 work.register8 work.shift_register
+# vsim -voptargs="+acc" work.adder_subtracter work.bitstorage work.fulladder work.register32 work.register8 work.shift_register 
+# Start time: 16:42:22 on Jun 09,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.adder_subtracter(calc)#1
+# Loading work.bitstorage(memlike)#1
+# Loading work.fulladder(addlike)#1
+# Loading work.register32(biggermem)#1
+# Loading work.register8(memmy)#1
+# Loading work.shift_register(shifter)#1
+# Loading work.fulladder(addlike)#2
+# Loading work.register8(memmy)#2
+quit -sim
+# End time: 16:42:39 on Jun 09,2023, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 1
+vsim -voptargs=+acc work._opt work._opt1 work._opt2 work.adder_subtracter
+# vsim -voptargs="+acc" work._opt work._opt1 work._opt2 work.adder_subtracter 
+# Start time: 16:42:56 on Jun 09,2023
+# ** Warning: (vsim-3824) Optimized (_opt, _opt1, _opt2) and unoptimized (adder_subtracter) top-level design units are
+# simulated together. Unoptimized design units will not be optimized. 
+# ** Error (suppressible): (vsim-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+# ** Warning: (vsim-1963) Explicit invocation on automatically named optimized design "_opt" will not cause it to be locked.
+# ** Warning: (vsim-1963) Explicit invocation on automatically named optimized design "_opt1" will not cause it to be locked.
+# ** Warning: (vsim-1963) Explicit invocation on automatically named optimized design "_opt2" will not cause it to be locked.
+# Error loading design
+# End time: 16:42:56 on Jun 09,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 5
+vsim -voptargs=+acc work.adder_subtracter work.bitstorage work.fulladder work.register32 work.register8 work.shift_register work.testreg_vhd
+# vsim -voptargs="+acc" work.adder_subtracter work.bitstorage work.fulladder work.register32 work.register8 work.shift_register work.testreg_vhd 
+# Start time: 16:43:10 on Jun 09,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.adder_subtracter(calc)#1
+# Loading work.bitstorage(memlike)#1
+# Loading work.fulladder(addlike)#1
+# Loading work.register32(biggermem)#1
+# Loading work.register8(memmy)#1
+# Loading work.shift_register(shifter)#1
+# Loading work.testreg_vhd(behavior)#1
+add wave -position insertpoint  \
+sim:/shift_register/datain \
+sim:/shift_register/dir \
+sim:/shift_register/shamt \
+sim:/shift_register/dataout
+add wave -position insertpoint  \
+sim:/adder_subtracter/datain_a \
+sim:/adder_subtracter/datain_b \
+sim:/adder_subtracter/add_sub \
+sim:/adder_subtracter/dataout \
+sim:/adder_subtracter/co \
+sim:/adder_subtracter/c \
+sim:/adder_subtracter/btemp
+add wave -position insertpoint  \
+sim:/register32/datain \
+sim:/register32/enout32 \
+sim:/register32/enout16 \
+sim:/register32/enout8 \
+sim:/register32/writein32 \
+sim:/register32/writein16 \
+sim:/register32/writein8 \
+sim:/register32/dataout \
+sim:/register32/enableout \
+sim:/register32/writein \
+sim:/register32/enablingout \
+sim:/register32/writingin
+run
+run
+run
+run
+add wave -position insertpoint sim:/testreg_vhd/*
+run
+add wave -position insertpoint sim:/testreg_vhd/*
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+run
