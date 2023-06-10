@@ -1,0 +1,146 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/21.1
+Ebusmux2to1
+Z0 w1686379270
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 3
+Z5 dC:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_6
+Z6 8C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_6/ProcElements.vhd
+Z7 FC:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_6/ProcElements.vhd
+l0
+L11 1
+VQOQ=6Bb6nbPd6d`C@M2Wo0
+!s100 N144V5D>E9Toc`Eo`oMk00
+Z8 OL;C;2021.2;73
+32
+Z9 !s110 1686379272
+!i10b 1
+Z10 !s108 1686379272.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_6/ProcElements.vhd|
+Z12 !s107 C:/Users/maxim/Documents/Year3/ECEGR2220_Spring_2023/Lab_6/ProcElements.vhd|
+!i113 0
+Z13 o-work work -2002 -explicit
+Z14 tExplicit 1 CvgOpt 0
+Aselection
+R1
+R2
+R3
+R4
+Z15 DEx4 work 10 busmux2to1 0 22 QOQ=6Bb6nbPd6d`C@M2Wo0
+!i122 3
+l18
+Z16 L17 9
+Z17 VbolmbAbR=MBi]5T13MZce0
+Z18 !s100 ]KDNVA;e;97fZZlcb@AlN2
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Econtrol
+R0
+R1
+R2
+R3
+R4
+!i122 3
+R5
+R6
+R7
+l0
+L33 1
+V3`bW4a4Z88HGE<4NB5l7_0
+!s100 H?EfR2Zzdg2D`:h1h8L8]0
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Aboss
+R1
+R2
+R3
+R4
+DEx4 work 7 control 0 22 3`bW4a4Z88HGE<4NB5l7_0
+!i122 3
+l50
+L48 25
+V@:;2I_nH;b6D_?GY63UMm2
+!s100 J?I6U`P7PDdm8UL2`5R6V0
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Eprogramcounter
+R0
+R1
+R2
+R3
+R4
+!i122 3
+R5
+R6
+R7
+l0
+L80 1
+VHlBXLKCV??lC2_E3HZ>]K2
+!s100 [LM9XQ7]=`IK8bXjHH3L80
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Aexecutive
+R1
+R2
+R3
+R4
+DEx4 work 14 programcounter 0 22 HlBXLKCV??lC2_E3HZ>]K2
+!i122 3
+l88
+L87 5
+VDlf3<hSB1;GM0laYeABR60
+!s100 1JoUTg23ZAU5DiL<Ie6S]0
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
